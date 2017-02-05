@@ -5,8 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Tamilnadu Devlopment Bank</title>
+	<link rel="stylesheet" href="http://localhost/tndb/tndb-ui/assets/vendor.css">
+    <link rel="stylesheet" href="http://localhost/tndb/tndb-ui/assets/bank-app.css">
 </head>
 <body>
-<h1>Welcome to Tamilnadu Development bank</h1>
+ <div id ='bank-app'></div>
+ <script type="text/javascript" src="http://localhost/tndb/tndb-ui/assets/vendor.js"></script>
+ <script type="text/javascript" src="http://localhost/tndb/tndb-ui/assets/bank-app.js"></script>
 </body>
 </html>
