@@ -2,17 +2,23 @@ package com.tndb.web.login.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoginController {
 	
 	@RequestMapping("/LoginServlet")
-	public ModelAndView helloWorld() {
- 
-		String message = "<br><div style='text-align:center;'>"
-				+ "<h3>********** Hello World, Spring MVC Tutorial</h3>This message is coming from CrunchifyHelloWorld.java **********</div><br><br>";
-		return new ModelAndView("welcome");
+	public ModelAndView LoginServlet() {
+		return new ModelAndView("loginServlet");
 	}
+	
+	@RequestMapping(value="/validateLogin", method=RequestMethod.GET)
+	public void ValidateLoginUser() {
+		System.out.println("Inside Validate Login");
+ 
+		
+	}
+
 
 }

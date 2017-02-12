@@ -4,14 +4,42 @@
 
 <web-app>
   <display-name>Tamil Nadu Development Bank Web Application</display-name>
+  
+  
+  
+  <context-param>
+   <param-name>contextConfigLocation</param-name>
+   <param-value>/WEB-INF/LoginServlet-servlet.xml</param-value>
+  </context-param>
+  
+  
+
+  <listener>
+	<listener-class>
+	  org.springframework.web.context.ContextLoaderListener
+	</listener-class>
+  </listener>
+  
+  
   <servlet>
   	<servlet-name>LoginServlet</servlet-name>
   	<display-name>LoginServlet</display-name>
   	<description>Tamil Nadu Development Bank Login</description>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/LoginServlet-servlet.xml</param-value>
+    </init-param>
+  	<load-on-startup>1</load-on-startup>
   </servlet>
+  
+   
   <servlet-mapping>
   	<servlet-name>LoginServlet</servlet-name>
-  	<url-pattern>/LoginServlet</url-pattern>
+  	<url-pattern>/</url-pattern>
   </servlet-mapping>
+
+
+  
+  
 </web-app>
